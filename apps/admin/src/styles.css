@@ -1,0 +1,36 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #f0edf8;
+  background: #101324;
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 280px;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  width: min(42rem, 100%);
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 6vw, 2.75rem);
+}
+p {
+  line-height: 1.6;
+}
+.status {
+  color: #c4bed9;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@tpkn/room",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --local --env development --ip 127.0.0.1 --port 8788 --inspector-port 9231",
+    "build": "wrangler deploy --dry-run --env production --outdir dist",
+    "build:development": "wrangler deploy --dry-run --env development --outdir dist",
+    "build:staging": "wrangler deploy --dry-run --env staging --outdir dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@tpkn/config": "0.0.0",
+    "@tpkn/shared": "0.0.0"
+  }
+}

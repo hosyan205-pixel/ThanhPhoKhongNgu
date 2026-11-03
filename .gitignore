@@ -1,0 +1,34 @@
+# Dependencies and local runtimes
+node_modules/
+.tools/
+.npm/
+# Build and tool state
+dist/
+coverage/
+.vite/
+.wrangler/
+*.tsbuildinfo
+test-results/
+playwright-report/
+blob-report/
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+*.pem
+*.key
+*.p12
+*.pfx
+.npmrc.local
+# Logs
+*.log
+npm-debug.log*
+# OS and IDE state
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/

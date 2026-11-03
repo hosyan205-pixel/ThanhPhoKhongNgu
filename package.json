@@ -1,0 +1,56 @@
+{
+  "name": "thanh-pho-khong-ngu",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "workers/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=24.22.2 <25",
+    "npm": ">=11 <12"
+  },
+  "packageManager": "npm@11.19.1",
+  "scripts": {
+    "dev": "concurrently --kill-others -n web,admin,gateway,room,matchmaking,city-pulse,payment \"npm run dev -w @tpkn/web\" \"npm run dev -w @tpkn/admin\" \"npm run dev -w @tpkn/gateway\" \"npm run dev -w @tpkn/room\" \"npm run dev -w @tpkn/matchmaking\" \"npm run dev -w @tpkn/city-pulse\" \"npm run dev -w @tpkn/payment\"",
+    "build": "npm run typecheck && npm run build --workspaces --if-present",
+    "build:development": "npm run typecheck && npm run build:development --workspaces --if-present",
+    "build:staging": "npm run typecheck && npm run build:staging --workspaces --if-present",
+    "typecheck": "tsc --noEmit -p tsconfig.json && npm run typecheck --workspaces --if-present",
+    "lint": "eslint . --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:install": "playwright install chromium"
+  },
+  "devDependencies": {
+    "typescript": "6.0.3",
+    "vite": "8.3.5",
+    "@vitejs/plugin-react": "6.2.1",
+    "wrangler": "4.156.2",
+    "@cloudflare/workers-types": "5.20261103.1",
+    "vitest": "5.1.0",
+    "@playwright/test": "1.64.1",
+    "eslint": "10.14.0",
+    "@eslint/js": "10.0.1",
+    "typescript-eslint": "8.72.1",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.7",
+    "eslint-config-prettier": "10.1.8",
+    "prettier": "3.9.10",
+    "globals": "17.14.0",
+    "concurrently": "10.0.6",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "workerd@1.20261102.1": true
+  }
+}

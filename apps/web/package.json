@@ -1,0 +1,20 @@
+{
+  "name": "@tpkn/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --mode development",
+    "build": "vite build --mode production",
+    "build:development": "vite build --mode development",
+    "build:staging": "vite build --mode staging",
+    "preview": "vite preview --host 127.0.0.1 --port 4173 --strictPort",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "phaser": "3.90.0",
+    "@tpkn/validation": "0.0.0"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "tpkn-payment",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-03",
+  "workers_dev": false,
+  "preview_urls": false,
+  "vars": {
+    "APP_ENV": "development",
+  },
+  "env": {
+    "development": {
+      "name": "tpkn-payment-development",
+      "vars": {
+        "APP_ENV": "development",
+      },
+    },
+    "staging": {
+      "name": "tpkn-payment-staging",
+      "vars": {
+        "APP_ENV": "staging",
+      },
+    },
+    "production": {
+      "name": "tpkn-payment-production",
+      "vars": {
+        "APP_ENV": "production",
+      },
+    },
+  },
+}

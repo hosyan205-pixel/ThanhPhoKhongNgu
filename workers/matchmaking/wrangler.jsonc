@@ -1,0 +1,31 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "tpkn-matchmaking",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-03",
+  "workers_dev": false,
+  "preview_urls": false,
+  "vars": {
+    "APP_ENV": "development",
+  },
+  "env": {
+    "development": {
+      "name": "tpkn-matchmaking-development",
+      "vars": {
+        "APP_ENV": "development",
+      },
+    },
+    "staging": {
+      "name": "tpkn-matchmaking-staging",
+      "vars": {
+        "APP_ENV": "staging",
+      },
+    },
+    "production": {
+      "name": "tpkn-matchmaking-production",
+      "vars": {
+        "APP_ENV": "production",
+      },
+    },
+  },
+}
